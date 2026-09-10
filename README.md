@@ -17,26 +17,6 @@ A small message board built with Node.js, Express, and EJS as part of The Odin P
 - HTML
 - CSS
 
-## Run locally
-
-Install the dependencies:
-
-```bash
-npm install
-```
-
-Start the development server:
-
-```bash
-npm run dev
-```
-
-Open this address in your browser:
-
-```text
-http://localhost:3000
-```
-
 ## Data storage
 
 Messages are stored in an in-memory array. Messages added through the form are cleared whenever the server restarts.
