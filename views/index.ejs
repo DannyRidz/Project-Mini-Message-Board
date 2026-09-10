@@ -1,38 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title><%= title %></title>
 
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css">
   </head>
 
   <body>
     <main>
       <h1><%= title %></h1>
 
-      <form method="POST" action="/new">
-        <div>
-          <label for="messageUser">Your name</label>
-          <input type="text" id="messageUser" name="messageUser" required />
-        </div>
+      <a href="/new">Write a new message</a>
 
-        <div>
-          <label for="messageText">Message</label>
-          <textarea
-            id="messageText"
-            name="messageText"
-            rows="5"
-            required
-          ></textarea>
-        </div>
-
-        <button type="submit">Send message</button>
-      </form>
-
-      <a href="/">Return to all messages</a>
+      <section class="messages">
+        <% messages.forEach((message) => { %>
+          <article class="message">
+            <h2><%= message.user %></h2>
+            <p><%= message.text %></p>
+            <time><%= message.added.toLocaleString() %></time>
+          </article>
+        <% }); %>
+      </section>
     </main>
   </body>
 </html>
