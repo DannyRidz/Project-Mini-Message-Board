@@ -1,5 +1,6 @@
 const path = require("node:path");
 const express = require("express");
+const indexRouter = require("./routes/indexRouter");
 
 const app = express();
 
@@ -9,9 +10,7 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
-app.get("/", (req, res) => {
-  res.send("Mini Message Board is running!");
-});
+app.use("/", indexRouter);
 
 const PORT = 3000;
 
