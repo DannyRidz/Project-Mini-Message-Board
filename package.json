@@ -1,8 +1,8 @@
 {
   "name": "project-mini-message-board",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A mini message board built with Express and EJS",
+  "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "dev": "node --watch app.js"
