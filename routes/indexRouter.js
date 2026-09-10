@@ -22,4 +22,10 @@ indexRouter.get("/", (req, res) => {
   });
 });
 
+indexRouter.get("/new", (req, res) => {
+  res.render("form", {
+    title: "New Message",
+  });
+});
+
 module.exports = indexRouter;
